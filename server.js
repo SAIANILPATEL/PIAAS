@@ -1,12 +1,15 @@
-// server.js
 import express from 'express';
 import multer from 'multer';
 import fs from 'fs-extra';
 import path from 'path';
 import simpleGit from 'simple-git';
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
+
+// Use CORS middleware
+app.use(cors());
 
 const upload = multer({ dest: 'uploads/' });
 const git = simpleGit();
@@ -28,11 +31,13 @@ app.post('/upload', upload.fields([{ name: 'jmx' }, { name: 'data' }]), async (r
         await fs.ensureDir(testConfigDir);
         await fs.ensureDir(testDataDir);
 
-        await fs.move(jmxFile.path, path.join(testConfigDir, jmxFile.originalname));
+        await fs.move(jmxFile.path, path.join(testConfigDir, jmxFile.originalname), { overwrite: true });
+
 
         if (dataFiles.length > 0) {
             for (const file of dataFiles) {
-                await fs.move(file.path, path.join(testDataDir, file.originalname));
+                await fs.move(file.path, path.join(testDataDir, file.originalname), { overwrite: true });
+
             }
         } else {
             await fs.writeFile(path.join(testDataDir, '.gitkeep'), '');
