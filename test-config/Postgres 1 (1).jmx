@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
+        <collectionProp name="UserParameters.names">
+          <stringProp name="1374358793">ProjectDetails</stringProp>
+          <stringProp name="-2012536775">TimeZone</stringProp>
+          <stringProp name="1704970583">RunDetails</stringProp>
+          <stringProp name="1189374577">ConcurrentUsers</stringProp>
+          <stringProp name="-279188086">TotalTestDuration</stringProp>
+          <stringProp name="-1021390074">JTLFile_Path</stringProp>
+          <stringProp name="-2009435666">Timestamp_Path</stringProp>
+          <stringProp name="-1783110597">JTLtoCSV_Path</stringProp>
+          <stringProp name="1700619860">FinalCSV_Path</stringProp>
+          <stringProp name="-1978327395">OSPS_Path</stringProp>
+          <stringProp name="-2000998901">JDBC_URL</stringProp>
+          <stringProp name="-2130102345">DB_UserName</stringProp>
+          <stringProp name="-646449828">DB_Password</stringProp>
+        </collectionProp>
+        <collectionProp name="UserParameters.thread_values">
+          <collectionProp name="-2114113650">
+            <stringProp name="1143879147">Azamara</stringProp>
+            <stringProp name="67044">CST</stringProp>
+            <stringProp name="-1080032737">Run_102</stringProp>
+            <stringProp name="1572">15</stringProp>
+            <stringProp name="1722">60</stringProp>
+            <stringProp name="130568148">C:/Users/Anil/Desktop/PIAAS/PSQL/Neptuneloadtest.jtl</stringProp>
+            <stringProp name="138777736">C:/Users/Anil/Desktop/PIAAS/PSQL/TimeStamps.txt</stringProp>
+            <stringProp name="-2065519478">C:/Users/Anil/Desktop/PIAAS/PSQL/JTLtoCSV.csv</stringProp>
+            <stringProp name="-466668413">C:/Users/Anil/Desktop/PIAAS/PSQL/FinalCSVForDatabase.csv</stringProp>
+            <stringProp name="168327557">C:\Users\Anil\Downloads\apache-jmeter-5.5\apache-jmeter-5.5\bin</stringProp>
+            <stringProp name="-1682634313">jdbc:postgresql://piaas-postgres-db.cvnkyoxdzoea.us-east-1.rds.amazonaws.com:5432/PIAAS</stringProp>
+            <stringProp name="757584761">postgres</stringProp>
+            <stringProp name="-160184576">DoytEuXPiamqOaZv1ALD</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <boolProp name="UserParameters.per_iteration">false</boolProp>
+      </UserParameters>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">select 1</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+        <stringProp name="dataSource">Pg_pool</stringProp>
+        <stringProp name="dbUrl">${JDBC_URL}</stringProp>
+        <stringProp name="driver">org.postgresql.Driver</stringProp>
+        <stringProp name="initQuery"></stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">${DB_Password}</stringProp>
+        <stringProp name="poolMax">0</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">${DB_UserName}</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1370726934000</longProp>
+        <longProp name="ThreadGroup.end_time">1370726934000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler time stamp extract start time and end time_Final" enabled="false">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import java.nio.file.Files
+import java.nio.file.Paths
+import java.text.SimpleDateFormat
+import java.util.Date
+
+// Define paths
+def jtlFilePath = &apos;${JTLFile_Path}&apos;
+def outputFilePath = &apos;${Timestamp_Path}&apos;
+
+// Open input JTL file
+def lines = Files.readAllLines(Paths.get(jtlFilePath))
+
+// Define date format
+def outputDateFormat = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;)
+
+// Extract start time from the first row&apos;s first value
+def startTime = parseTimestamp(lines[1]) // Assuming the first row is the header
+
+// Extract end time from the last row&apos;s first column
+def endTime = parseTimestamp(lines[-1])
+
+// Create output file writer
+def writer = new FileWriter(outputFilePath)
+
+// Write header
+writer.write(&quot;startTime,endTime\n&quot;)
+
+// Format start and end times
+def formattedStartTime = outputDateFormat.format(new Date(startTime))
+def formattedEndTime = outputDateFormat.format(new Date(endTime))
+
+// Write start time and end time to file for each line
+lines.each { line -&gt;
+    writer.write(&quot;$formattedStartTime,$formattedEndTime\n&quot;)
+}
+
+// Close output file writer
+writer.close()
+
+// Function to parse timestamp
+def parseTimestamp(line) {
+    def timestampString = line.split(&apos;,&apos;)[0].trim()
+    try {
+        // Assuming the timestamp is in milliseconds since epoch
+        return Long.parseLong(timestampString)
+    } catch (NumberFormatException e) {
+        // Handle the case where the timestamp string cannot be converted to a number
+        println &quot;Error parsing timestamp: $timestampString&quot;
+        // You can add your error handling logic here, such as returning a default value
+        return 0
+    }
+}
+</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="Generate CSV file from JTL file" enabled="true">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">CMD</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">/C</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">PluginsManagerCMD.bat --tool Reporter --generate-csv &quot;${JTLtoCSV_Path}&quot; --input-jtl &quot;${JTLFile_Path}&quot; --plugin-type AggregateReport</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory">C:\Users\Anil\Downloads</stringProp>
+          <stringProp name="TestPlan.comments">D:\Tools\PostgreSQL\ResultsJTL\22May_Test5_300Users.jtl</stringProp>
+        </SystemSampler>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="FinalCSV for removing the special characters" enabled="false">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+String filePath = &quot;${JTLtoCSV_Path}&quot;;
+StringBuilder modifiedContent = new StringBuilder();
+
+try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+    String line;
+    while ((line = reader.readLine()) != null) {
+        // Remove special characters
+        line = removeCommasWithinQuotes(line);
+        // Remove commas within double quotes
+        line = removeSpecialCharacters(line);
+        modifiedContent.append(line).append(System.lineSeparator());
+    }
+} catch (IOException e) {
+    System.err.println(&quot;An error occurred while reading the CSV file: &quot; + e.getMessage());
+}
+
+// Write modified content back to the file
+try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+    writer.write(modifiedContent.toString());
+    System.out.println(&quot;CSV file updated successfully.&quot;);
+} catch (IOException e) {
+    System.err.println(&quot;An error occurred while updating the CSV file: &quot; + e.getMessage());
+}
+
+String removeSpecialCharacters(String str) {
+    return str.replaceAll(&quot;[^a-zA-Z0-9_./\\s,]&quot;, &quot;&quot;);
+}
+
+String removeCommasWithinQuotes(String line) {
+    StringBuilder result = new StringBuilder();
+    boolean withinQuotes = false;
+
+    for (int i = 0; i &lt; line.length(); i++) {
+        char currentChar = line.charAt(i);
+        if (currentChar == &apos;&quot;&apos;) {
+            withinQuotes = !withinQuotes; // Toggle the withinQuotes flag
+        }
+
+        if (currentChar == &apos;,&apos; &amp;&amp; withinQuotes) {
+            // If we encounter a comma within quotes, skip it
+            continue;
+        }
+
+        result.append(currentChar);
+    }
+
+    return result.toString();
+}
+</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223SamplerFinalCsv Ater adding the time stamp" enabled="false">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import java.text.SimpleDateFormat
+
+// Specify the file paths
+def convertedCsvFile = new File(&quot;${JTLtoCSV_Path}&quot;)
+def timestampsFile = new File(&quot;${Timestamp_Path}&quot;)
+def finalCsvFile = new File(&quot;${FinalCSV_Path}&quot;)
+
+// Read lines from both files
+def convertedLines = convertedCsvFile.readLines()
+def timestamps = timestampsFile.readLines()
+
+// Debug: Print timestamps before parsing
+println &quot;Timestamps:&quot;
+timestamps.each { println it }
+
+// Merge lines and write to final CSV file
+def mergedLines = []
+
+// Add header
+mergedLines.add(&quot;Label,# Samples,Average,Median,90Line,95Line,99Line,Min,Max,Error,Throughpu,Received K,Std. Dev.,startTime,endTime&quot;)
+
+// Loop through lines in the CSV file, skipping the first line
+for (int i = 1; i &lt; Math.min(convertedLines.size(), timestamps.size()); i++) {
+    def convertedLine = convertedLines[i].trim()
+    def timestamp = timestamps[i].trim()
+    
+    if (convertedLine &amp;&amp; timestamp) {
+        try {
+            // Add start time and end time to the converted line
+            mergedLines.add(&quot;$convertedLine,$timestamp&quot;)
+        } catch (Exception e) {
+            println &quot;Error parsing timestamp: $timestamp&quot;
+            // Handle parsing error (e.g., skip line)
+            // You can add your custom error handling logic here
+        }
+    }
+}
+
+// Write merged lines to the final CSV file
+finalCsvFile.write(mergedLines.join(&quot;\n&quot;))
+</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="DataInsertToDB-PostgreSql project name and run" enabled="false">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">import org.apache.commons.io.FileUtils
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.PreparedStatement
+import java.io.File
+import java.math.BigDecimal
+import java.text.SimpleDateFormat
+
+// JDBC Connection Configuration settings
+def dbUrl = &quot;jdbc:postgresql://piaas-postgres-db.cvnkyoxdzoea.us-east-1.rds.amazonaws.com:5432/PIAAS&quot;
+def dbUser = &quot;postgres&quot;
+def dbPassword = &quot;DoytEuXPiamqOaZv1ALD&quot;
+
+// Provide the complete path to your CSV file
+def csvFilePath = &quot;${FinalCSV_Path}&quot;
+
+// Read CSV file
+def lines = FileUtils.readLines(new File(csvFilePath), &quot;UTF-8&quot;)
+
+// Connect to the database
+Connection connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword)
+def ProjectName = vars.get(&quot;ProjectDetails&quot;)
+
+// Retrieve project name and RunDetails from JMeter properties
+def projectName = vars.get(&quot;TimeZone&quot;)
+def runDetails = vars.get(&quot;RunDetails&quot;)
+def concurrentUsers = vars.get(&quot;ConcurrentUsers&quot;) as Integer
+def totalTestDuration = vars.get(&quot;TotalTestDuration&quot;) as Integer
+
+// Prepare SQL statement with additional metrics
+String sql = &quot;INSERT INTO public.\&quot;${ProjectName}\&quot;(\&quot;Label\&quot;, \&quot;Samples\&quot;, \&quot;Average\&quot;, \&quot;Median\&quot;, \&quot;Line_90\&quot;, \&quot;Line_95\&quot;, \&quot;Line_99\&quot;, \&quot;Min\&quot;, \&quot;Max\&quot;, \&quot;Error_\&quot;, \&quot;Throughput\&quot;, \&quot;ReceivedKB_sec\&quot;, \&quot;Std_Dev\&quot;, \&quot;startTime\&quot;, \&quot;endTime\&quot;, \&quot;TimeZone\&quot;, \&quot;RunDetails\&quot;, \&quot;ConcurrentUsers\&quot;, \&quot;TotalTestDuration\&quot;) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)&quot;
+PreparedStatement statement = connection.prepareStatement(sql)
+
+// Skip headers
+lines = lines.drop(1)
+
+// Loop through lines in the CSV file, skipping the last row if it equals &quot;Total&quot;
+lines.eachWithIndex { line, index -&gt;
+    if (index &lt; lines.size() - 1) {
+        def data = line.split(&quot;,&quot;) // Assuming CSV is comma-separated
+        
+        // Extracting data from CSV
+        def Label = data[0]
+        def Samples = data[1] as Integer // Assuming samples is an integer
+        
+        // Convert values to seconds and round to two decimal places
+        def convertToSeconds = { value -&gt;
+            def floatValue = value as Float
+            def seconds = floatValue / 1000
+            new BigDecimal(seconds).setScale(2, BigDecimal.ROUND_HALF_UP)
+        }
+        
+        // Convert values to BigDecimal
+        def Average = convertToSeconds(data[2])
+        def Median = convertToSeconds(data[3])
+        def Line_90 = convertToSeconds(data[4])
+        def Line_95 = convertToSeconds(data[5])
+        def Line_99 = convertToSeconds(data[6])
+        def Min = convertToSeconds(data[7])
+        def Max = convertToSeconds(data[8])
+        
+        // Removing &apos;%&apos; from error_rate and converting it to numeric
+        def Error_ = data[9]
+        def errorRateNumeric = Error_.replaceAll(&apos;%&apos;, &apos;&apos;) as Float
+        
+        // Parse startTime and endTime from CSV in the format &quot;yyyy-MM-dd HH:mm:ss.SSS&quot;
+        def startTime = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;).parse(data[13])
+        def endTime = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;).parse(data[14])
+        
+        // Set parameters for the SQL statement
+        statement.setString(1, Label)
+        statement.setInt(2, Samples)
+        statement.setBigDecimal(3, Average)
+        statement.setBigDecimal(4, Median)
+        statement.setBigDecimal(5, Line_90)
+        statement.setBigDecimal(6, Line_95)
+        statement.setBigDecimal(7, Line_99)
+        statement.setBigDecimal(8, Min)
+        statement.setBigDecimal(9, Max)
+        statement.setFloat(10, errorRateNumeric)
+        statement.setFloat(11, data[10] as Float)
+        statement.setFloat(12, data[11] as Float)
+        statement.setFloat(13, data[12] as Float)
+        statement.setTimestamp(14, new java.sql.Timestamp(startTime.getTime()))
+        statement.setTimestamp(15, new java.sql.Timestamp(endTime.getTime()))
+        statement.setString(16, projectName) // Set project name
+        statement.setString(17, runDetails) // Set run details
+        
+        // Check for null values and set accordingly
+        if (concurrentUsers != null) {
+            statement.setInt(18, concurrentUsers) // Set concurrent users
+        } else {
+            statement.setNull(18, java.sql.Types.INTEGER)
+        }
+        
+        if (totalTestDuration != null) {
+            statement.setInt(19, totalTestDuration) // Set total test duration
+        } else {
+            statement.setNull(19, java.sql.Types.INTEGER)
+        }
+        
+        // Execute the SQL statement
+        statement.executeUpdate()
+    }
+}
+
+// Close resources
+statement.close()
+connection.close()
+</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="TestPlan.comments">jdbc:postgresql://127.0.0.1:5432/postgres,postgres,qualiperf</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>false</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>false</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
