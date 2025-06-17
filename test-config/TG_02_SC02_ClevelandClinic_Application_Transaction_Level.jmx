@@ -1,0 +1,2634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </Arguments>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers"/>
+      </HeaderManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+        <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+        <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+        <stringProp name="WebDriverConfig.driver_path">C:\Users\Anil\Downloads\chromedriver-win64 (1)\chromedriver-win64\chromedriver.exe</stringProp>
+        <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+        <boolProp name="WebDriverConfig.headless">false</boolProp>
+        <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+        <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+        <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+        <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+        <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+        <stringProp name="WebDriverConfig.http_host"></stringProp>
+        <intProp name="WebDriverConfig.http_port">8080</intProp>
+        <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+        <stringProp name="WebDriverConfig.https_host"></stringProp>
+        <intProp name="WebDriverConfig.https_port">8080</intProp>
+        <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+        <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+        <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+        <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+        <stringProp name="WebDriverConfig.socks_host"></stringProp>
+        <intProp name="WebDriverConfig.socks_port">8080</intProp>
+        <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+        <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+      </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG01_SC01_ClevelandClinic_Application_Entire_Flow" enabled="false">
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <com.googlecode.jmeter.plugins.webdriver.config.FirefoxDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.FirefoxDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.FirefoxDriverConfig" testname="jp@gc - Firefox Driver Config" enabled="false">
+          <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <stringProp name="WebDriverConfig.driver_path">path to driver.exe of the relevant browser</stringProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <boolProp name="WebDriverConfig.headless">false</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="FirefoxDriverConfig.general.useragent.override.enabled">false</boolProp>
+          <boolProp name="FirefoxDriverConfig.network.negotiate-auth.allow-insecure-ntlm-v1">false</boolProp>
+          <collectionProp name="FirefoxDriverConfig.general.extensions"/>
+          <collectionProp name="FirefoxDriverConfig.general.preferences"/>
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.config.FirefoxDriverConfig>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+          <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <boolProp name="WebDriverConfig.headless">false</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+          <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler" enabled="false">
+          <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+// WDS.sampleResult.sampleStart()
+WebDriver driver=WDS.browser;
+
+driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+driver.manage().window().maximize();
+driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+Thread.sleep(10000);
+driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+Thread.sleep(10000);
+try{
+	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+	}
+	catch(Exception e){
+System.out.println(&quot;no updates to close&quot;);
+		}
+	
+Thread.sleep(5000);
+JavascriptExecutor js=(JavascriptExecutor)driver;
+js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+
+driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+Thread.sleep(10000);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//waitForElement(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+    Thread.sleep(5000);
+//waitForElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;));
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[1]&quot;)));
+Thread.sleep(30000);
+driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//waitForElement(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;));
+//
+//public void waitForElement(By by){
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+//	}
+ 
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler if else" enabled="true">
+          <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+WDS.sampleResult.sampleStart();
+
+try {
+    // Navigate to the website
+    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+    driver.manage().window().maximize();
+
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+    By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed initial pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No pop-up to close.&quot;);
+    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed second pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No second pop-up.&quot;);
+    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+    
+    if (driver.findElements(hSection).size() &gt; 0) {
+        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+    } else {
+        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+    }
+
+    // ✅ Wait for content to load
+    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+    if (driver.findElements(infoBar).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+        System.out.println(&quot;Info bar is visible.&quot;);
+    } else {
+        System.out.println(&quot;Info bar not found.&quot;);
+    }
+
+    // ✅ Scroll and click on the index item
+    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+    
+    if (driver.findElements(indexItem).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+        System.out.println(&quot;Clicked on index item.&quot;);
+    } else {
+        System.out.println(&quot;Index item not found.&quot;);
+    }
+
+    // ✅ Wait until the headline is visible
+    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+    if (driver.findElements(headline).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+        System.out.println(&quot;Headline is visible.&quot;);
+    } else {
+        System.out.println(&quot;Headline not found.&quot;);
+    }
+
+} catch (Exception e) {
+    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+} finally {
+    // Stop the sample execution time tracking
+    WDS.sampleResult.sampleEnd();
+}
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler1" enabled="false">
+          <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.script">// WDS.sampleResult.sampleStart()
+//WDS.browser.get(&apos;http://www.google.com&apos;)
+
+WDS.browser.get(&quot;https://my.clevelandclinic.org/&quot;);
+WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;*//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a&quot;)).click();
+//WDS.browser.findElement(org.openqa.selenium.By.id(&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;)).click();
+//WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;//div[@id=&apos;results-section&apos;]/div[4]/div[2]/div[3]/a/div/h4&quot;)).click();
+
+ 
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler2" enabled="false">
+          <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.script">// WDS.sampleResult.sampleStart()
+//WDS.browser.get(&apos;http://www.google.com&apos;) driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//    driver.findElement(By.xpath(&quot;//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a&quot;)).click();
+//    driver.findElement(By.id(&quot;b4949598-c6af-4e66-9dbb-0b820ceaf3fbjs-h&quot;)).click();
+//    driver.findElement(By.xpath(&quot;//div[@id=&apos;results-section&apos;]/div[4]/div[2]/div[3]/a/div/h4&quot;)).click();
+
+WDS.browser.get(&quot;https://my.clevelandclinic.org/&quot;);
+WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;*//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a&quot;)).click();
+JavascriptExecutor js=(JavascriptExecutor)WDS.browser;
+js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;b4949598-c6af-4e66-9dbb-0b820ceaf3fbjs-h&quot;)));
+WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;b4949598-c6af-4e66-9dbb-0b820ceaf3fbjs-h&quot;)).click();
+//WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;//div[@id=&apos;results-section&apos;]/div[4]/div[2]/div[3]/a/div/h4&quot;)).click();
+
+ 
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler1123" enabled="false">
+          <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+// WDS.sampleResult.sampleStart()
+WebDriver driver=WDS.browser;
+
+driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+driver.manage().window().maximize();
+driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+Thread.sleep(10000);
+driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+Thread.sleep(10000);
+try{
+	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+	}
+	catch(Exception e){
+System.out.println(&quot;no updates to close&quot;);
+		}
+	
+Thread.sleep(5000);
+JavascriptExecutor js=(JavascriptExecutor)driver;
+js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+
+driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+Thread.sleep(10000);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//waitForElement(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+    Thread.sleep(5000);
+//waitForElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;));
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[1]&quot;)));
+Thread.sleep(30000);
+driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//waitForElement(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;));
+//
+//public void waitForElement(By by){
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+//	}
+ 
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="SC01_ClevelandClinic_Application_Entire_Flow" enabled="false">
+          <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+// WDS.sampleResult.sampleStart()
+WebDriver driver=WDS.browser;
+
+driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+driver.manage().window().maximize();
+driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+Thread.sleep(10000);
+driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+Thread.sleep(10000);
+try{
+	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+	}
+	catch(Exception e){
+System.out.println(&quot;no updates to close&quot;);
+		}
+	
+Thread.sleep(5000);
+JavascriptExecutor js=(JavascriptExecutor)driver;
+js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+
+driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+Thread.sleep(10000);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//waitForElement(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+    Thread.sleep(5000);
+//waitForElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;));
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[1]&quot;)));
+Thread.sleep(30000);
+driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//waitForElement(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;));
+//
+//public void waitForElement(By by){
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+//	}
+ 
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">D:\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\jp@gc -Demo WebDriver Sampler.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG_02_SC02_ClevelandClinic_Application_Transaction_Level" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.duration">300</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC02_ClevelandClinic_T01_Launch" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+
+WebDriver driver=WDS.browser;
+
+driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+driver.manage().window().maximize();
+//driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//Thread.sleep(10000);
+//driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+//Thread.sleep(10000);
+//try{
+//	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//	}
+//	catch(Exception e){
+//System.out.println(&quot;no updates to close&quot;);
+//		}
+//	
+//Thread.sleep(5000);
+//JavascriptExecutor js=(JavascriptExecutor)driver;
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+//
+//driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+//Thread.sleep(10000);
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+//    Thread.sleep(5000);
+//
+//Thread.sleep(30000);
+//driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC02_ClevelandClinic_T02_close Popup" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+
+WebDriver driver=WDS.browser;
+
+//driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//driver.manage().window().maximize();
+driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+Thread.sleep(10000);
+//driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+//Thread.sleep(10000);
+//try{
+//	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//	}
+//	catch(Exception e){
+//System.out.println(&quot;no updates to close&quot;);
+//		}
+//	
+//Thread.sleep(5000);
+//JavascriptExecutor js=(JavascriptExecutor)driver;
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+//
+//driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+//Thread.sleep(10000);
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+//    Thread.sleep(5000);
+//
+//Thread.sleep(30000);
+//driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC02_ClevelandClinic_T03_Cllick on_HealthLibrary" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+
+WebDriver driver=WDS.browser;
+
+//driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//driver.manage().window().maximize();
+//driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//Thread.sleep(10000);
+driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+Thread.sleep(10000);
+//try{
+//	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//	}
+//	catch(Exception e){
+//System.out.println(&quot;no updates to close&quot;);
+//		}
+//	
+//Thread.sleep(5000);
+//JavascriptExecutor js=(JavascriptExecutor)driver;
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+//
+//driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+//Thread.sleep(10000);
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+//    Thread.sleep(5000);
+//
+//Thread.sleep(30000);
+//driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC02_ClevelandClinic_T04_Click_on_scroll" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+
+WebDriver driver=WDS.browser;
+
+//driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//driver.manage().window().maximize();
+//driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//Thread.sleep(10000);
+//driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+//Thread.sleep(10000);
+try{
+	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+	}
+	catch(Exception e){
+System.out.println(&quot;no updates to close&quot;);
+		}
+	
+Thread.sleep(5000);
+//JavascriptExecutor js=(JavascriptExecutor)driver;
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+//
+//driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+//Thread.sleep(10000);
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+//    Thread.sleep(5000);
+//
+//Thread.sleep(30000);
+//driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC02_ClevelandClinic_T05_Click_on_any_alphabet" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+
+WebDriver driver=WDS.browser;
+
+//driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//driver.manage().window().maximize();
+//driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//Thread.sleep(10000);
+//driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+//Thread.sleep(10000);
+//try{
+//	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//	}
+//	catch(Exception e){
+//System.out.println(&quot;no updates to close&quot;);
+//		}
+//	
+//Thread.sleep(5000);
+JavascriptExecutor js=(JavascriptExecutor)driver;
+js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+
+driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+Thread.sleep(10000);
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+//
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+//    Thread.sleep(5000);
+//
+//Thread.sleep(30000);
+//driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+//    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+//
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC02_ClevelandClinic_T06_Select__any_Description" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.support.ui.WebDriverWait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import java.time.Duration
+
+
+WebDriver driver=WDS.browser;
+
+//driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//driver.manage().window().maximize();
+//driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//Thread.sleep(10000);
+//driver.findElement(By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;)).click();
+//Thread.sleep(10000);
+//try{
+//	driver.findElement(By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;)).click();
+//	}
+//	catch(Exception e){
+//System.out.println(&quot;no updates to close&quot;);
+//		}
+//	
+//Thread.sleep(5000);
+//JavascriptExecutor js=(JavascriptExecutor)driver;
+//js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;,driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)));
+//
+//driver.findElement(By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;)).click();
+//Thread.sleep(10000);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;)));
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)));
+    Thread.sleep(5000);
+
+Thread.sleep(30000);
+driver.findElement(By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;)).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;)));
+
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">D:\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\jp@gc -Demo WebDriver Sampler_3Users_5min.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG_03_SC03_ClevelandClinic_Application_Transaction_Level" enabled="false">
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.duration">300</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC03_ClevelandClinic_T01_Launch" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <boolProp name="WebDriverConfig.headless">false</boolProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+            <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+WDS.sampleResult.sampleStart();
+
+try {
+    // Navigate to the website
+    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+    driver.manage().window().maximize();
+	}
+	 catch (Exception e) {
+    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+}
+
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+    By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed initial pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No pop-up to close.&quot;);
+    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+//    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+//    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+//    System.out.println(&quot;Navigated to Health Library.&quot;);
+//
+//    // ✅ Handle another possible pop-up
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed second pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No second pop-up.&quot;);
+//    }
+//
+//    // ✅ Scroll to the &quot;H&quot; section link
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+//    
+//    if (driver.findElements(hSection).size() &gt; 0) {
+//        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+//        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+//        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+//    } else {
+//        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+//    }
+//
+//    // ✅ Wait for content to load
+//    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+//    if (driver.findElements(infoBar).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+//        System.out.println(&quot;Info bar is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Info bar not found.&quot;);
+//    }
+//
+//    // ✅ Scroll and click on the index item
+//    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+//    
+//    if (driver.findElements(indexItem).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+//        System.out.println(&quot;Clicked on index item.&quot;);
+//    } else {
+//        System.out.println(&quot;Index item not found.&quot;);
+//    }
+//
+//    // ✅ Wait until the headline is visible
+//    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+//    if (driver.findElements(headline).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+//        System.out.println(&quot;Headline is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Headline not found.&quot;);
+//    }
+//
+//} 
+//catch (Exception e) {
+//    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+//} finally {
+//    // Stop the sample execution time tracking
+//    WDS.sampleResult.sampleEnd();
+//}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC03_ClevelandClinic_T02_close Popup" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <boolProp name="WebDriverConfig.headless">false</boolProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+            <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.StaleElementReferenceException;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+//WDS.sampleResult.sampleStart();
+//
+//try {
+//    // Navigate to the website
+//    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//    driver.manage().window().maximize();
+//
+//    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//
+//    // ✅ Wait for and close the initial pop-up if it exists
+//    By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed initial pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No pop-up to close.&quot;);
+//   }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed second pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No second pop-up.&quot;);
+//    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+//    
+//    if (driver.findElements(hSection).size() &gt; 0) {
+//        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+//        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+//        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+//    } else {
+//        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+//    }
+//
+//    // ✅ Wait for content to load
+//    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+//    if (driver.findElements(infoBar).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+//        System.out.println(&quot;Info bar is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Info bar not found.&quot;);
+//    }
+//
+//    // ✅ Scroll and click on the index item
+//    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+//    
+//    if (driver.findElements(indexItem).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+//        System.out.println(&quot;Clicked on index item.&quot;);
+//    } else {
+//        System.out.println(&quot;Index item not found.&quot;);
+//    }
+//
+//    // ✅ Wait until the headline is visible
+//    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+//    if (driver.findElements(headline).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+//        System.out.println(&quot;Headline is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Headline not found.&quot;);
+//    }
+//
+//} catch (Exception e) {
+//    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+//} finally {
+//    // Stop the sample execution time tracking
+//    WDS.sampleResult.sampleEnd();
+//}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC03_ClevelandClinic_T03_Cllick on_HealthLibrary" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <boolProp name="WebDriverConfig.headless">false</boolProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+            <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler112345" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+//WDS.sampleResult.sampleStart();
+
+//try {
+//    // Navigate to the website
+//    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//    driver.manage().window().maximize();
+//} catch (Exception e) {
+//    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+//}
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+   By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed initial pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No pop-up to close.&quot;);
+//    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+//    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+//    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+//    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed second pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No second pop-up.&quot;);
+    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+//    
+//    if (driver.findElements(hSection).size() &gt; 0) {
+//        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+//        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+//        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+//    } else {
+//        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+//    }
+//
+//    // ✅ Wait for content to load
+//    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+//    if (driver.findElements(infoBar).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+//        System.out.println(&quot;Info bar is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Info bar not found.&quot;);
+//    }
+//
+//    // ✅ Scroll and click on the index item
+//    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+//    
+//    if (driver.findElements(indexItem).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+//        System.out.println(&quot;Clicked on index item.&quot;);
+//    } else {
+//        System.out.println(&quot;Index item not found.&quot;);
+//    }
+//
+//    // ✅ Wait until the headline is visible
+//    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+//    if (driver.findElements(headline).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+//        System.out.println(&quot;Headline is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Headline not found.&quot;);
+//    }
+//
+//
+// finally {
+//    // Stop the sample execution time tracking
+//    WDS.sampleResult.sampleEnd();
+//}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC03_ClevelandClinic_T04_Click_on_scroll" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="false">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+WDS.sampleResult.sampleStart();
+
+try {
+    // Navigate to the website
+    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+    driver.manage().window().maximize();
+
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+    By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed initial pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No pop-up to close.&quot;);
+    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed second pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No second pop-up.&quot;);
+    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+    
+    if (driver.findElements(hSection).size() &gt; 0) {
+        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+    } else {
+        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+    }
+
+    // ✅ Wait for content to load
+    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+    if (driver.findElements(infoBar).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+        System.out.println(&quot;Info bar is visible.&quot;);
+    } else {
+        System.out.println(&quot;Info bar not found.&quot;);
+    }
+
+    // ✅ Scroll and click on the index item
+    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+    
+    if (driver.findElements(indexItem).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+        System.out.println(&quot;Clicked on index item.&quot;);
+    } else {
+        System.out.println(&quot;Index item not found.&quot;);
+    }
+
+    // ✅ Wait until the headline is visible
+    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+    if (driver.findElements(headline).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+        System.out.println(&quot;Headline is visible.&quot;);
+    } else {
+        System.out.println(&quot;Headline not found.&quot;);
+    }
+
+} catch (Exception e) {
+    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+} finally {
+    // Stop the sample execution time tracking
+    WDS.sampleResult.sampleEnd();
+}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <boolProp name="WebDriverConfig.headless">false</boolProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+            <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler112345" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+//WDS.sampleResult.sampleStart();
+
+//try {
+//    // Navigate to the website
+//    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//    driver.manage().window().maximize();
+//} catch (Exception e) {
+//    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+//}
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+   //By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed initial pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No pop-up to close.&quot;);
+//    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+//    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+//    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+//    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed second pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No second pop-up.&quot;);
+//    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+    
+    if (driver.findElements(hSection).size() &gt; 0) {
+        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+    } else {
+        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+    }
+//
+//    // ✅ Wait for content to load
+//    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+//    if (driver.findElements(infoBar).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+//        System.out.println(&quot;Info bar is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Info bar not found.&quot;);
+//    }
+//
+//    // ✅ Scroll and click on the index item
+//    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+//    
+//    if (driver.findElements(indexItem).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+//        System.out.println(&quot;Clicked on index item.&quot;);
+//    } else {
+//        System.out.println(&quot;Index item not found.&quot;);
+//    }
+//
+//    // ✅ Wait until the headline is visible
+//    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+//    if (driver.findElements(headline).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+//        System.out.println(&quot;Headline is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Headline not found.&quot;);
+//    }
+//
+//
+// finally {
+//    // Stop the sample execution time tracking
+//    WDS.sampleResult.sampleEnd();
+//}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC03_ClevelandClinic_T05_Click_on_any_alphabet" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="false">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+WDS.sampleResult.sampleStart();
+
+try {
+    // Navigate to the website
+    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+    driver.manage().window().maximize();
+
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+    By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed initial pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No pop-up to close.&quot;);
+    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed second pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No second pop-up.&quot;);
+    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+    
+    if (driver.findElements(hSection).size() &gt; 0) {
+        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+    } else {
+        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+    }
+
+    // ✅ Wait for content to load
+    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+    if (driver.findElements(infoBar).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+        System.out.println(&quot;Info bar is visible.&quot;);
+    } else {
+        System.out.println(&quot;Info bar not found.&quot;);
+    }
+
+    // ✅ Scroll and click on the index item
+    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+    
+    if (driver.findElements(indexItem).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+        System.out.println(&quot;Clicked on index item.&quot;);
+    } else {
+        System.out.println(&quot;Index item not found.&quot;);
+    }
+
+    // ✅ Wait until the headline is visible
+    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+    if (driver.findElements(headline).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+        System.out.println(&quot;Headline is visible.&quot;);
+    } else {
+        System.out.println(&quot;Headline not found.&quot;);
+    }
+
+} catch (Exception e) {
+    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+} finally {
+    // Stop the sample execution time tracking
+    WDS.sampleResult.sampleEnd();
+}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <boolProp name="WebDriverConfig.headless">false</boolProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+            <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler112345" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+//WDS.sampleResult.sampleStart();
+
+//try {
+//    // Navigate to the website
+//    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//    driver.manage().window().maximize();
+//} catch (Exception e) {
+//    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+//}
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+   //By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed initial pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No pop-up to close.&quot;);
+//    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+//    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+//    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+//    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed second pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No second pop-up.&quot;);
+//    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+//    
+//    if (driver.findElements(hSection).size() &gt; 0) {
+//        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+//        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+//        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+//    } else {
+//        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+//    }
+//
+//    // ✅ Wait for content to load
+    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+    if (driver.findElements(infoBar).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+        System.out.println(&quot;Info bar is visible.&quot;);
+    } else {
+        System.out.println(&quot;Info bar not found.&quot;);
+    }
+//
+//    // ✅ Scroll and click on the index item
+//    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+//    
+//    if (driver.findElements(indexItem).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+//        System.out.println(&quot;Clicked on index item.&quot;);
+//    } else {
+//        System.out.println(&quot;Index item not found.&quot;);
+//    }
+//
+//    // ✅ Wait until the headline is visible
+//    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+//    if (driver.findElements(headline).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+//        System.out.println(&quot;Headline is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Headline not found.&quot;);
+//    }
+//
+//
+// finally {
+//    // Stop the sample execution time tracking
+//    WDS.sampleResult.sampleEnd();
+//}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="SC03_ClevelandClinic_T06_Select__any_Description" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler11234" enabled="false">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+WDS.sampleResult.sampleStart();
+
+try {
+    // Navigate to the website
+    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+    driver.manage().window().maximize();
+
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+    By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed initial pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No pop-up to close.&quot;);
+    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+    if (driver.findElements(closeButton).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+        System.out.println(&quot;Closed second pop-up.&quot;);
+    } else {
+        System.out.println(&quot;No second pop-up.&quot;);
+    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+    
+    if (driver.findElements(hSection).size() &gt; 0) {
+        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+    } else {
+        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+    }
+
+    // ✅ Wait for content to load
+    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+    if (driver.findElements(infoBar).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+        System.out.println(&quot;Info bar is visible.&quot;);
+    } else {
+        System.out.println(&quot;Info bar not found.&quot;);
+    }
+
+    // ✅ Scroll and click on the index item
+    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+    
+    if (driver.findElements(indexItem).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+        System.out.println(&quot;Clicked on index item.&quot;);
+    } else {
+        System.out.println(&quot;Index item not found.&quot;);
+    }
+
+    // ✅ Wait until the headline is visible
+    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+    if (driver.findElements(headline).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+        System.out.println(&quot;Headline is visible.&quot;);
+    } else {
+        System.out.println(&quot;Headline not found.&quot;);
+    }
+
+} catch (Exception e) {
+    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+} finally {
+    // Stop the sample execution time tracking
+    WDS.sampleResult.sampleEnd();
+}
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <boolProp name="WebDriverConfig.headless">false</boolProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+            <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+            <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler112345" enabled="true">
+            <stringProp name="TestPlan.comments">//*[@id=&quot;72e9566c-284a-4de7-a60f-805d3910db3djs-h&quot;]..........//header[@id=&apos;site-header&apos;]/nav[2]/ul/li[6]/a....full.../html/body/header/div/div[2]/div[1]/nav/ul/li[6]/a
+//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.script">import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+
+WebDriver driver = WDS.browser;  // JMeter&apos;s WebDriver instance
+
+// Start sample execution time tracking
+//WDS.sampleResult.sampleStart();
+
+//try {
+//    // Navigate to the website
+//    driver.get(&quot;https://my.clevelandclinic.org/&quot;);
+//    driver.manage().window().maximize();
+//} catch (Exception e) {
+//    System.out.println(&quot;Exception occurred: &quot; + e.getMessage());
+//}
+    // Create WebDriverWait instance
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+    // ✅ Wait for and close the initial pop-up if it exists
+   //By closeButton = By.xpath(&quot;//img[@alt=&apos;close button&apos;]&quot;);
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed initial pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No pop-up to close.&quot;);
+//    }
+
+    // ✅ Wait for the &quot;Health Library&quot; link and click it
+//    By healthLibraryLink = By.xpath(&quot;//a[text()=&apos;Health Library&apos; and @class=&apos;nav--secondary__link &apos;]&quot;);
+//    wait.until(ExpectedConditions.elementToBeClickable(healthLibraryLink)).click();
+//    System.out.println(&quot;Navigated to Health Library.&quot;);
+
+    // ✅ Handle another possible pop-up
+//    if (driver.findElements(closeButton).size() &gt; 0) {
+//        wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+//        System.out.println(&quot;Closed second pop-up.&quot;);
+//    } else {
+//        System.out.println(&quot;No second pop-up.&quot;);
+//    }
+
+    // ✅ Scroll to the &quot;H&quot; section link
+//    JavascriptExecutor js = (JavascriptExecutor) driver;
+//    By hSection = By.xpath(&quot;//div[@class=&apos;az-letters__container&apos;]//a[contains(@id,&apos;-h&apos;)]&quot;);
+//    
+//    if (driver.findElements(hSection).size() &gt; 0) {
+//        js.executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, driver.findElement(hSection));
+//        wait.until(ExpectedConditions.elementToBeClickable(hSection)).click();
+//        System.out.println(&quot;Navigated to &apos;H&apos; section.&quot;);
+//    } else {
+//        System.out.println(&quot;&apos;H&apos; section link not found.&quot;);
+//    }
+//
+////    // ✅ Wait for content to load
+//    By infoBar = By.xpath(&quot;(//span[contains(@class,&apos;info-bar-count&apos;)])[2]&quot;);
+//    if (driver.findElements(infoBar).size() &gt; 0) {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(infoBar));
+//        System.out.println(&quot;Info bar is visible.&quot;);
+//    } else {
+//        System.out.println(&quot;Info bar not found.&quot;);
+//    }
+//
+//    // ✅ Scroll and click on the index item
+    By indexItem = By.xpath(&quot;(//div[@class=&apos;index-list__title&apos;])[2]&quot;);
+    
+    if (driver.findElements(indexItem).size() &gt; 0) {
+        wait.until(ExpectedConditions.elementToBeClickable(indexItem)).click();
+        System.out.println(&quot;Clicked on index item.&quot;);
+    } else {
+        System.out.println(&quot;Index item not found.&quot;);
+    }
+
+    // ✅ Wait until the headline is visible
+    By headline = By.xpath(&quot;//h1[@data-identity=&apos;headline&apos;]&quot;);
+    if (driver.findElements(headline).size() &gt; 0) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headline));
+        System.out.println(&quot;Headline is visible.&quot;);
+    } else {
+        System.out.println(&quot;Headline not found.&quot;);
+    }
+
+
+ 
+    // Stop the sample execution time tracking
+    WDS.sampleResult.sampleEnd();
+
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters">/html/body/header/div/div/div/nav[2]/ul/li[5]/a     ............//*[@id=&quot;site-header&quot;]/div/div[2]/div[1]/nav/ul/li[6]/a</stringProp>
+            <stringProp name="WebDriverSampler.language">groovy</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">D:\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\TG_03_SC03_ClevelandClinic_Application_Transaction_Level_5Users_1Run.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group-3" enabled="false">
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <com.googlecode.jmeter.plugins.webdriver.config.FirefoxDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.FirefoxDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.FirefoxDriverConfig" testname="jp@gc - Firefox Driver Config" enabled="false">
+          <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <stringProp name="WebDriverConfig.driver_path">path to driver.exe of the relevant browser</stringProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <boolProp name="WebDriverConfig.headless">false</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="FirefoxDriverConfig.general.useragent.override.enabled">false</boolProp>
+          <boolProp name="FirefoxDriverConfig.network.negotiate-auth.allow-insecure-ntlm-v1">false</boolProp>
+          <collectionProp name="FirefoxDriverConfig.general.extensions"/>
+          <collectionProp name="FirefoxDriverConfig.general.preferences"/>
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.config.FirefoxDriverConfig>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+          <boolProp name="WebDriverConfig.acceptinsecurecerts">false</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <stringProp name="WebDriverConfig.driver_path">C:\Users\Teja\Downloads\chromedriver-win64\chromedriver-win64\chromedriver</stringProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <boolProp name="WebDriverConfig.headless">false</boolProp>
+          <boolProp name="WebDriverConfig.maximize_browser">false</boolProp>
+          <stringProp name="ChromeDriverConfig.additional_args"></stringProp>
+          <stringProp name="ChromeDriverConfig.binary_path"></stringProp>
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_ftp_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_socks_proxy">true</boolProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler" enabled="false">
+          <stringProp name="WebDriverSampler.script">// WDS.sampleResult.sampleStart()
+//WDS.browser.get(&apos;http://jmeter-plugins.org&apos;)
+
+WDS.browser.get(&quot;https://petstore.octoperf.com/&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Enter the Store&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Sign In&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.id(&quot;stripes--881805403&quot;)).clear();
+    WDS.browser.findElement(org.openqa.selenium.By.id(&quot;stripes--881805403&quot;)).sendKeys(&quot;j2ee&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;j2ee&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;signon&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;//div[@id=&apos;SidebarContent&apos;]/a/img&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;FI-SW-01&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Add to Cart&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Proceed to Checkout&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;newOrder&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Confirm&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Sign Out&quot;)).click();
+
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler3" enabled="true">
+          <stringProp name="TestPlan.comments">//*[@id=&quot;SidebarContent&quot;]/a[1]/img</stringProp>
+          <stringProp name="WebDriverSampler.script">// WDS.sampleResult.sampleStart()
+//WDS.browser.get(&apos;http://jmeter-plugins.org&apos;)////*[@id=&quot;SidebarContent&quot;]/a[1]/img
+
+//WDS.browser.manage().timeouts().implicitlyWait(10, java.util.concurrent.TimeUnit.SECONDS);
+
+// Capture UX metrics: Here we calculate the time taken for the page to load
+//long pageLoadTime = System.currentTimeMillis() - startTime;
+//System.out.println(&quot;Page Load Time: &quot; + pageLoadTime + &quot; milliseconds&quot;);
+
+WDS.browser.get(&quot;https://petstore.octoperf.com/&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Enter the Store&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Sign In&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;password&quot;)).clear();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;username&quot;)).sendKeys(&quot;j2ee&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;password&quot;)).sendKeys(&quot;j2ee&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;signon&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;//*[@id=&apos;SidebarContent&apos;]/a[1]/img&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;FI-SW-01&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Add to Cart&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Proceed to Checkout&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;newOrder&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Confirm&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Sign Out&quot;)).click();
+
+// WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler1" enabled="false">
+          <stringProp name="TestPlan.comments">//*[@id=&quot;SidebarContent&quot;]/a[1]/img</stringProp>
+          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart()
+//WDS.browser.get(&apos;http://jmeter-plugins.org&apos;)////*[@id=&quot;SidebarContent&quot;]/a[1]/img
+//time taken for object
+WDS.browser.manage().timeouts().implicitlyWait(60, java.util.concurrent.TimeUnit.SECONDS);
+WDS.browser.get(&quot;https://petstore.octoperf.com/&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Enter the Store&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Sign In&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;password&quot;)).clear();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;username&quot;)).sendKeys(&quot;j2ee&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;password&quot;)).sendKeys(&quot;j2ee&quot;);
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;signon&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.xpath(&quot;//*[@id=&apos;SidebarContent&apos;]/a[1]/img&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;FI-SW-01&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Add to Cart&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Proceed to Checkout&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.name(&quot;newOrder&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Confirm&quot;)).click();
+    WDS.browser.findElement(org.openqa.selenium.By.linkText(&quot;Sign Out&quot;)).click();
+
+WDS.sampleResult.sampleEnd()
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">D:\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\jp@gc -Demo WebDriver Sampler.jtl</stringProp>
+          <stringProp name="TestPlan.comments">geckodriver.exe </stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">D:\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\jp@gc -Demo WebDriver Sampler.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">C:\Users\Anil\Desktop\CHROME_RIC\results.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
